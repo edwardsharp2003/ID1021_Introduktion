@@ -1,0 +1,39 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18} 
+
+\usepackage{minted}
+
+\begin{document}
+
+\title{
+    \textbf{Introduction assignment}
+}
+\author{Edward Sharp}
+\date{16-01-25}
+
+\maketitle
+
+\section{the clock test}
+    In the first bit of code that is run and presented in the task we are running a script
+    which is timing how long it takes to complete two {\tt clock\_gettime()}-calls,
+    the call to start and the call to stop taking time. This process is looped 10 times which
+    gives us 10 time readings.
+    From running the code a number of times, the resolution of the clock seems to be too low to
+    actually measure how long the program takes to run. The results are a mix of 100 or 0 $\mu s$,
+    suggesting that the results given are not accurate.
+
+
+    In the second piece of code tested, the same thing is done but a single array access is performed
+    as well in the form of the {\tt sum}-variable being updated by adding the current element of {\tt given[]}
+    The results seem to be roughly the same. The results given are still a mix of 100 or 0 $\mu s$.
+
+
+\end{document}
